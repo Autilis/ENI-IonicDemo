@@ -1,5 +1,7 @@
 {
   "name": "premieredemo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

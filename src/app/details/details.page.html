@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>details</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="film">
+    <img [src]="film.Poster" alt="pas d'image">
+    <ion-card-header>
+      <ion-card-subtitle>{{film.Title}}</ion-card-subtitle>
+      <ion-card-title>{{film.Year}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{film.Plot}}
+      <ion-button>
+        Lire
+        <ion-icon slot="end" name="musical-note" (click)="lireDescription()"  [disabled]="isLecture"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
